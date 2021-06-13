@@ -12,7 +12,7 @@ services:
             EULA: "TRUE"
             TYPE: "PAPER"
             USE_AIKAR_FLAGS: "TRUE"
-            MEMORY: "512M"
+            MEMORY: "1G"
             MAX_TICK_TIME: "-1"
             SPIGET_RESOURCES: "2538,48853,60088"
             DIFFICULTY: "hard"

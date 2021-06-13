@@ -12,7 +12,7 @@ variable "region" {
 
 variable "vm" {
   type = string
-  default = "Standard_B1s"
+  default = "Standard_B1ms"
   description = "The type of VM instance which should be used (B1s is free-tier, 1 vcpu, 1gb ram)"
 }
 
