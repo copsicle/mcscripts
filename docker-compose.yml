@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+    mc:
+        image: itzg/minecraft-server
+        restart: unless-stopped
+        ports:
+            - 25565:25565
+        environment:
+            EULA: "TRUE"
+            TYPE: "PAPER"
+            USE_AIKAR_FLAGS: "TRUE"
+            MEMORY: "700M"
+            MAX_TICK_TIME: "-1"
+            SPIGET_RESOURCES: "2538,48853,60088"
+            DIFFICULTY: "hard"
+            WHITELIST: "GitCommitYeet"
+            OPS: "GitCommitYeet"
+            ICON: "https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png"
+            MAX_PLAYERS: "69"
+            MOTD: "Epic Minecraft Server"
+        volumes:
+            - ./server:/data
+    web:
+        image: halverneus/static-file-server
+        restart: unless-stopped
+        ports:
+            - 6969:6969
+        environment:
+            folder: ./server/backups
+            port: 6969
