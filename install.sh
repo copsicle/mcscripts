@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Making swapfile..."
 sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -13,12 +14,15 @@ sudo apt-get -y install docker-compose
 # echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 # sudo apt-get update
 # sudo apt-get -y install docker-ce docker-ce-cli containerd.io
-sudo groupadd docker
+# sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-dcu
-while [ "`docker inspect -f {{.State.Health.Status}} mc`" != "healthy" ]; do     sleep 2; done;
+echo "Initializing server, this might take a few minutes..."
+docker-compose up -d
+while [ "`docker inspect -f {{.State.Health.Status}} mcscripts_mc_1`" != "healthy" ]; do     sleep 2; done;
+echo "Applying configuration files..."
 rsync -avr --exclude='README.md' config/ server/
 docker-compose restart
+echo "Done!"
 # docker pull itzg/minecraft-server
 # docker run -d -it -p 25565:25565 -e EULA=TRUE -e TYPE=PAPER -e USE_AIKAR_FLAGS=true -e MAX_TICK_TIME=-1 -e SPIGET_RESOURCES=48853,60088 -v /home/$USER/mc:/data --name mc itzg/minecraft-server
