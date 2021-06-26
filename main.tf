@@ -81,6 +81,22 @@ resource "azurerm_network_security_rule" "mc" {
   destination_address_prefix = "*"
 }
 
+resource "azurerm_network_security_rule" "web" {
+  name = "web"
+  description = "Static File Server"
+  resource_group_name = azurerm_resource_group.rg.name
+  network_security_group_name = azurerm_network_security_group.nsg.name
+  
+  priority = 800
+  direction = "Inbound"
+  access = "Allow"
+  protocol = "TCP"
+  source_port_range = "*"
+  destination_port_range = var.webport
+  source_address_prefix = "*"
+  destination_address_prefix = "*"
+}
+
 resource "azurerm_network_interface" "nic" {
   name = "${var.prefix}-nic"
   resource_group_name = azurerm_resource_group.rg.name

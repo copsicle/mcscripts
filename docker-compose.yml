@@ -14,7 +14,7 @@ services:
             USE_AIKAR_FLAGS: "TRUE"
             MEMORY: "1G"
             MAX_TICK_TIME: "-1"
-            SPIGET_RESOURCES: "2538,48853,60088"
+            SPIGET_RESOURCES: "48853,60088"
             DIFFICULTY: "hard"
             WHITELIST: "GitCommitYeet"
             OPS: "GitCommitYeet"
@@ -29,7 +29,6 @@ services:
         stdin_open: true
         tty: true
         ports:
-            - 6969:6969
-        environment:
-            folder: ./server/backups
-            port: 6969
+            - 6969:8080
+        volumes:
+            - ./server/backups:/web

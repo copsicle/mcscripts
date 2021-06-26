@@ -1,0 +1,32 @@
+getBackupFileDirectory: ''
+saveServerJar: false
+savePluginJars: false
+AutosaveDelay: 0D,6H
+LastAutosave: 1620982880474
+enableautoSaving: true
+FileNameFormat: Backup-%date%
+prefix: '&6[&3ServerRestorer&6]&8'
+kickMessage: '&6[&3ServerRestorer&6]&8 Restoring server to previous save. Please rejoin
+  in a few seconds.'
+EnableFTP: false
+EnableFTPS: false
+EnableSFTP: false
+FTPAdress: www.example.com
+FTPPort: 80
+FTPUsername: User
+FTPPassword: password
+CompressionLevel_Max_9: 9
+FTP_Directory: ''
+AutoBackup-HourToBackup: -1
+exceptions:
+- logs
+- crash-reports
+- backups
+- dynmap
+- .lock
+- pixelprinter
+MaxSaveSize: 20G
+MaxFileSaved: 1000
+DeleteZipOnFTPTransfer: false
+DeleteZipIfFailed: false
+FolderSeparator: /

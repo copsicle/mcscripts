@@ -33,6 +33,13 @@ variable "mcport" {
   default = "25565"
   description = "Port for the minecraft server"
 }
+
+variable "webport" {
+  type = string
+  default = "6969"
+  description = "Port for the web server"
+}
+
 variable "disktype" {
   type = string
   default = "Premium_LRS"
