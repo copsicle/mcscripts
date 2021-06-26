@@ -1,7 +1,7 @@
 getBackupFileDirectory: ''
 saveServerJar: false
 savePluginJars: false
-AutosaveDelay: 0D,6H
+AutosaveDelay: 0D,5H
 LastAutosave: 1620982880474
 enableautoSaving: true
 FileNameFormat: Backup-%date%
@@ -25,7 +25,7 @@ exceptions:
 - dynmap
 - .lock
 - pixelprinter
-MaxSaveSize: 20G
+MaxSaveSize: 30G
 MaxFileSaved: 1000
 DeleteZipOnFTPTransfer: false
 DeleteZipIfFailed: false
