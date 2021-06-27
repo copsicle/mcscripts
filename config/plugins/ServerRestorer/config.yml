@@ -1,4 +1,4 @@
-getBackupFileDirectory: 'data'
+getBackupFileDirectory: ''
 saveServerJar: false
 savePluginJars: false
 AutosaveDelay: 0D,7H
