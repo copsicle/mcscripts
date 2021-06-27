@@ -12,15 +12,17 @@ services:
             EULA: "TRUE"
             TYPE: "PAPER"
             USE_AIKAR_FLAGS: "TRUE"
-            MEMORY: "1G"
+            MEMORY: "2560M"
             MAX_TICK_TIME: "-1"
-            SPIGET_RESOURCES: "48853,60088"
+            SPIGET_RESOURCES: "48853,60088,81534"
             DIFFICULTY: "hard"
             WHITELIST: "GitCommitYeet"
             OPS: "GitCommitYeet"
             ICON: "https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png"
             MAX_PLAYERS: "69"
             MOTD: "Epic Minecraft Server"
+            NETWORK_COMPRESSION_THRESHOLD: "512"
+            VIEW_DISTANCE: "8"
         volumes:
             - ./server:/data
     web:

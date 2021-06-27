@@ -1,7 +1,7 @@
 getBackupFileDirectory: ''
 saveServerJar: false
 savePluginJars: false
-AutosaveDelay: 0D,5H
+AutosaveDelay: 0D,7H
 LastAutosave: 1620982880474
 enableautoSaving: true
 FileNameFormat: Backup-%date%
