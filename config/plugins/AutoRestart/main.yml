@@ -8,7 +8,7 @@
 ## Main branch
 main:
     ## Sets the restart command after players have been kicked
-    execution: 'restart'
+    execution: 'stop'
     ## This will recalculate the restart countdown when using '/autore reload'
     recalculate_onreload: false
     ## Restart modes available 'interval', and 'timestamp'
