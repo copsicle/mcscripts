@@ -4,6 +4,7 @@ services:
     mc:
         image: itzg/minecraft-server
         restart: unless-stopped
+        network_mode: "host"
         stdin_open: true
         tty: true
         ports:
@@ -28,6 +29,7 @@ services:
     web:
         image: halverneus/static-file-server
         restart: unless-stopped
+        network_mode: "host"
         stdin_open: true
         tty: true
         ports:
